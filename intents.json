@@ -1,0 +1,960 @@
+{
+	"intents": [
+		{
+			"tag": "greeting",
+			"patterns": [
+			  "Hi",
+			  "Hey",
+			  "How are you",
+			  "Is anyone there?",
+			  "Hello",
+			  "Good day"
+			],
+			"responses": [
+				"Thanks for reaching out! What brings you to our site today?"
+			]
+		},
+		{
+			"tag": "goodbye",
+			"patterns": [
+				"Bye", 
+				"Goodbye", 
+				"See you later",
+				"Thank you"
+			],
+			"responses": ["Goodbye! Happy to Help You. Click on 'Stop' button to start a new conversation."]
+		},
+        {
+			"tag": "about",
+			"patterns": ["May I know about your bank?", 
+				"About you",
+				"What is this Bank",
+				"Do you provide a good service?",
+				"Can I know you?",
+				"Bank?",
+				"How can I know about your bank?",
+				"I want to know about the Bank?",
+				"About the Bank",
+				"About Us?"
+			],
+			"responses": ["Leads Bank (Sri Lanka) PLC was incorporated on 2005 to provide the best banking facilities to you. Our mission in the Banking industry is to provide the most useful and ethical services to our customers by creating an experience that builds lasting relationships. We value Synergy, Stability, Service, and Sharing. As aimed to become a foremost Company in Sri Lanka, we provide our services with best practices. Our service at you... How can I assist you?"]
+		},
+        {
+			"tag": "contact",
+			"patterns": ["How can I contact you?",
+				"Contacts?",
+				"How to contact?"
+			],
+			"responses": ["Contact Us via : www.leadsbank.com or infobank@leadssl.com or (+94)112 ### ### or (+94)112 ### ###"]
+		},
+        {
+			"tag": "place",
+			"patterns": ["At what time can I visit the bank?",
+				"Visit your bank",
+				"Visit branch",
+				"Open?",
+				"Open Days?",
+				"Open Time?"
+			],
+			"responses": ["Our branches are available on Monday to Friday from 8.30am to 5.00pm and on Saturday from 8.30am to 12.30pm."]
+		},
+		{
+			"tag": "services",
+			"patterns": ["What types of services do you provide?",
+				"What kind of services do you provide?",
+				"types of services do you provide?",
+				"Services you provide",
+				"Services",
+				"What are the main facilities do you provide?",
+				"Facilities?"
+			],
+			"responses": ["We provide serveral Facilities(/Services) under Accounts (Savings Acc, Fixed Deposit and Current Acc), Lending (Vehicle Loans) and Granting (Gold Loans)"]
+		},
+        {
+			"tag": "lending",
+			"patterns": ["What are the services under Lending?",
+				"What is Lending?",
+				"Lending?",
+				"May I know about Lending facilities?",
+				"What do you mean by Lending?"
+			],
+			"responses": ["Our Lending Facilities are Vehicle Loans. The loan will be lending according to your requirements and eligibility which you can clarify by contacting our marketing officers :)"]
+		},
+        {
+			"tag": "granting",
+			"patterns": ["What are the services under Granting?",
+				"What is Granting?",
+				"Granting?",
+				"May I know about Granting facilities?",
+				"What do you mean by Granting?"
+			],
+			"responses": ["Our Granting Facilities are Gold Loans which will be given after checking your golds. Please visit your nearest branch to grant your money today :)"]
+		},
+        {
+			"tag": "acounts",
+			"patterns": ["What types of accounts do you offer?",
+				"What types of accounts do you provide?",
+				"What kind of accounts do you offer?",
+				"main accounts",
+				"types of saving accounts",
+				"Is there different types of savings accounts. If so, what are they?"
+			],
+			"responses": ["We provide major 3 types of accounts as Savings Acc (Minor Savings:Below 18, Normal savings:On or Above 18 & below 60, Staff Savings: For our company Staff and Senior Citizen Savings: On or above 60), Fixed Deposit Acc as well as Current Accounts"]
+		},
+		{
+			"tag": "savings_eligibility",
+			"patterns": ["What are the eligibility requirements to open a savings account?",
+					"How sould I eligible to open a savings account?",
+					"Eligibility to open a new savings account"
+			],
+			"responses": ["To open a Minor Savings Acc child should be below 18. To open a normal Saving Acc main holder should be on or above 18 as well as below 60. To open a Senior Citizen Savings Acc main holder should be on or above 60"]
+		},
+		{
+			"tag": "savings_docs",
+			"patterns": ["What are the required documents to open a savings account?",
+					"What I want to open a savings account?",
+					"Needed documents?",
+					"What I should bring to open savings account?",
+					"Documents to open a minor savings account",
+					"Documents to open a normal savings account",
+					"Documents to open a staff savings account",
+					"Documents to open a Senior Citizen savings account"
+			],
+			"responses": ["Documents to open a savings account are Savings Mandate, KYC and FATCA which will be given by us. You required to bring ID/DL of main holder as well as sub holder/s and nominees if have. Additionally, it requires billing proof or other legal document (if have any address verifications). If it is minor account additionally required birth certificate number as main holder identification, guardian ID/DL as sub holder identification. On the other hand, if it is a staff savings, addtionally it requires appointed date with the copy of appointment letter"]
+		},
+		{
+			"tag": "savings_process",
+			"patterns":["How do I open a savings account",
+					"Process to open savings account",
+					"Savings account process",
+					"May I know how to open a new savings account?",
+					"How can I open a new account?",
+					"What is the procedure to open savings account?"
+			],
+			"responses":["Please visit your nearest Leads Bank with your ID/DL. They will provide you the documents to be filled and process your account activation. You will have to make minimum deposit (Rs. 500/-) and eventually get your passbook within limited time \n\n If you want to apply for online banking or debit card please request at the moment:) \n\n Note: As we provide Minor, Normal and senior citizen savings accounts, please take your assistance regarding specific savings account type(e.g. required documents for minor savings account)."]
+
+		},
+		{
+			"tag": "kyc",
+			"patterns": ["What is this KYC?",
+					"May I know about this KYC?"
+			],
+			"responses": ["KYC is simply refers to 'Know Your Customer.' In order to know about the details about client such as Full name, Identity details, Occupation, Source of income, Purpose of opening account and etc..."]
+		},
+		{
+			"tag": "fatca",
+			"patterns": ["What is this FATCA?",
+					"May I know about this FATCA?",
+					"Why do I need to sign on FATCA?",
+					"Is it mandatory to sign in FATCA?"
+			],
+			"responses": ["FATCA refers Foreign Account Tax Compliance Act. This is optional to sign. FATCA is proposed to verify whether the customer has any access to the U.S. financial system. To verify that you are a US account holder or not."]
+		},
+		{
+			"tag": "savings_online",
+			"patterns": ["How can I apply for online banking services?",
+					"What is the procedure to apply for online banking?",
+					"Process to online banking service?",
+					"Online banking",
+					"Can I access my savings account through online banking or mobile apps?",
+					"Can I set up automatic payments or transfers with the account?",
+					"Can I do online payments or transfers with the account?"
+			],
+			"responses": ["You must have a Savings account in our bank to apply for Online banking. If this requirement already satisfied, Please visit your nearest Leads Bank with ID/DL where you will fill an application for Online Banking Service. According, future details will provide and guide you through your mail. Eventually, you will be able to access your account through online platform and make your futher transactions."]
+		},
+		{
+			"tag": "savings_minimumbal",
+			"patterns": ["Is there a minimum balance required to open the savings account?",
+					"What is the minimum amount to open a savings account?",
+					"Minimum how much I required to open a savings account?"
+			],
+			"responses": ["The minimum amount you required to open your Savings account is Rs. 500/-"]
+		},
+		{
+			"tag": "savings_trans",
+			"patterns": ["Is there a limit on the number of transactions or number of withdrawals I can make per day?",
+					"Savings limitations?"
+			],
+			"responses": ["Minor accounts cannot make any transaction or withdrawal, only you can deposit. In other aacounts you have not any deposit limitation. But, you are limited to do trasfer or withdraw upto Rs. 200,000/- per day"]
+		},
+		{
+			"tag": "savings_debitcard",
+			"patterns": ["Is there a debit card associated with the savings-account?",
+					"Debit card?"
+			],
+			"responses": ["You must have a Savings account in our bank to apply for debit card. You can apply for debit card when you are opening the account. If this requirement not satisfied when opening your account, Please visit your nearest Leads Bank with ID/DL where you will fill an application to apply for debit card. According, your debit card application will process and send to branch. Eventually, you will be informed to collect it within 2 days"]
+		},
+		{
+			"tag": "savings_interest",
+			"patterns": ["What is the interest rate on the savings account?",
+					"Interest rates for savings accounts?",
+					"Savings rates currently?",
+					"Today Savings rates?",
+					"How often is interest calculated and paid out?"
+			],
+			"responses": ["Currently, for minor savings accounts 12% (per annum) and for other savings accounts 14.5% (per annum). Interest will be calculated monthly and add into your savings account."]
+		},
+		{
+			"tag": "savings_exceed",
+			"patterns": ["What happens if I withdraw more than the allowed amount/number of transactions?",
+					"If I exceed the withdraw limit"
+			],
+			"responses": ["Accounts are already limited for their particular transaction amount. So, you won't able to exceed the transaction limit."]
+		},
+		{
+			"tag": "savings_deposit",
+			"patterns": ["How can I make deposits into the savings account?",
+					"Deposit process?"
+			],
+			"responses": ["You can visit your nearest Leads Bank to deposit. If you already have online banking system, you are allowed to deposit through online. (:Save your time by joining our online banking system today:)"]
+		},
+		{
+			"tag": "savings_gift",
+			"patterns": ["Are there any promotional offers or incentives for opening a new savings account?",
+					"Do I have any gifts as savings account holder?",
+					"Will you offer me any additional advantages with savings account?",
+					"Can I have added rates?",
+					"Do you provide any gifts?"
+			],
+			"responses": ["You will have special offerings for your Savings account when you reach our list of top savings account holders from each branch. Then you will be offering by Sign-Up Bonuses, High-Interest Rates, Fee Waivers, Referral Programs, Relationship Bonuses, other timely insentives and etc. Make a strong bond with us to grab your promotion:)"]
+		},
+		{
+			"tag": "savings_close",
+			"patterns": ["How do I close the saving account if needed?",
+					"How to close my savings account?",
+					"I want to close my savings account"
+			],
+			"responses": ["Please visit the nearest branch to close your Savings account. You can apply to close your account with application, ID/DL and account closure letter. Eventually, you will be paid by your saving amount and close the account."]
+		},
+		{
+			"tag": "savings_changeminor",
+			"patterns": ["How to change Minor account to normal account?",
+					"I want to convert minor account to normal account"
+			],
+			"responses": ["Visit your nearest beanch with your ID/DL, sub holder who proceed your minor account + their ID/DL, letter from your sub holder addressing that he/she request to change the account type."]
+		},
+		{
+			"tag": "loan_type",
+			"patterns": ["What types of loans do you offer?",
+					"What types of loans are available?",
+					"Could you provide information about the different loan options you offer?",
+					"What kind of loan programs do you have?",
+					"Are there specific loan categories or products that I should be aware of?",
+					"Can you explain the different types of loans I can apply for?"
+			],
+			"responses": ["Under this Loan Facility we provide Vehicle Loans. Leasing, Revolving loans, Vehicle mortgage and vehicle loans(CL) are vehicle loan categories we provide which have many beneficial criterias for you. Each loan option will be provided according to requirements and bank nomes. We accommodate all vehicle categories accepted by the Registrar of Motor Vehicles (RMV). Please contatct our marketing officer/s ((+94)112 ### ### or (+94)112 ### ###) for more details about lending your facility today:)"]
+		},
+		{
+			"tag": "loan_rates",
+			"patterns": ["What is the interest rate on the loan?",
+					"What is the interest rate associated with this loan?",
+					"Could you provide me with information about the loan's interest rate?",
+					"What is the current interest rate for this type of loan?",
+					"I'm interested in knowing the rate of interest applied to this loan. Could you please provide that information?"
+			],
+			"responses": ["Currently, Leads provide 18.5% p.a. (minimum) Interest rate + Over Due Interest – 54% p.a. for Leasing Facility, 19% p.a. (minimum) Interest rate + Over Due Interest – 54% p.a. for Revolving Loan Facility, 20% p.a. (minimum) Interest rate + Over Due Interest – 54% p.a. for vehicle loans(CL), and 18.5% p.a. (minimum) Interest rate + Over Due Interest – 54% p.a. for Vehicle Mortgage Facility"]
+		},
+		{
+			"tag": "loan_repayment",
+			"patterns": ["What is the repayment term for the loan?",
+					"What is the duration of the repayment period for this loan?",
+					"Could you provide me with information about the length of the loan term?",
+					"How long do I have to repay the loan?",
+					"What is the repayment period or timeline for this loan?",
+					"Is there a specific timeframe within which I need to repay the loan?"
+			],
+			"responses": ["The specific timeframe for loan repayment depends on the loan product and amount borrowed. The loan agreement outlines the exact repayment period, which is typically 1 year/ 28 months, but we also offer flexibility in choosing a repayment period that suits your needs. We can provide you with a detailed repayment schedule upon approval of your loan application."]
+		},
+		{
+			"tag": "loan_prepay",
+			"patterns": ["Is there a prepayment penalty if I pay off the loan early?",
+					"Can you provide details about any charges or penalties I might incur for paying off the loan early?",
+					"If I were to pay off the loan before the agreed-upon term, would there be any fees or penalties?",
+					"Could you please inform me if there are any charges for early repayment of the loan?",
+					"Are there any penalties if I choose to pay off the loan before the scheduled end date?",
+					"I'm interested to know if there are any consequences or costs involved if I choose to settle the loan prior to the designated timeframe."
+			],
+			"responses": ["It depends on the type of loan you have. Some of our loan products have prepayment penalties, while others do not.  If you choose to pay off the loan before the agreed-upon term, there may be certain fees or penalties involved. The specific details and amounts can be found in the loan agreement."]
+		},
+		{
+			"tag": "loan_amount",
+			"patterns": ["What is the minimum and maximum loan amount that I can apply for?",
+					"What is the range of loan amounts available for application?",
+					"Could you provide me with information about the minimum and maximum loan amounts I can apply for?",
+					"What are the lower and upper limits for loan amounts that I can request?",
+					"Is there a specific minimum and maximum loan amount that I should be aware of when applying?",
+					"Can you please clarify the range of loan amounts that I am eligible to apply for?"
+			],
+			"responses": ["For our loan offerings, the minimum loan amount starts at Rs.25,000/- and can go up to 10 million. The actual loan amount you are eligible for will be determined during the application process based on your financial profile and our lending policies."]
+		},
+		{
+			"tag": "loan_fund",
+			"patterns": ["How long will it take to receive the loan funds once I'm approved?",
+					"How long does the disbursement process usually take after loan approval?",
+					"Once my loan application is approved, how much time does it typically take for the funds to be transferred?",
+					"Can you provide an estimate of the timeline for receiving the loan funds after approval?",
+					"What is the usual waiting period between loan approval and receiving the funds in my account?",
+					"Could you please inform me of the anticipated timeframe for the disbursal of the loan funds following approval?",
+					"Is there a specific duration within which I can expect the loan funds to be available to me after the approval process?"
+			],
+			"responses": ["Once your loan is approved, you can expect the funds to be disbursed within 2 business days if processing cheques or 1 business day if processing fundtransfer or cash in hand. Our team will guide you through the necessary steps and provide any additional documentation or information required for a smooth disbursement process. We strive to expedite the process and get the funds to you as quickly as possible."]
+		},
+		{
+			"tag": "loan_eligibility",
+			"patterns": ["What are the eligibility criteria to apply for a loan?",
+					"What are the requirements or criteria for eligibility to apply for a loan?",
+					"Could you please provide me with information about the eligibility criteria for loan applications?",
+					"What factors or qualifications determine if I am eligible to apply for a loan?",
+					"Are there specific eligibility requirements that I need to meet in order to be considered for a loan?",
+					"Can you outline the criteria or conditions that applicants must satisfy to be eligible for a loan?",
+					"I would like to know what prerequisites or qualifications are necessary to apply for a loan."
+			],
+			"responses": ["We have certain qualifications that applicants must meet to be considered for a loan. These typically involve residents of Sri Lanka over 18 years of age are eligible to apply, meeting the minimum income requirement, maintaining a satisfactory credit history, and providing necessary documentation such as identification, proof of income, and bank statements."]
+		},
+		{
+			"tag": "loan_docs",
+			"patterns": ["What documents do I need to provide to apply for a loan?",
+					"What documentation is necessary when applying for a loan?",
+					"Could you please provide me with a list of the documents I need to submit for a loan application?",
+					"What are the required documents I need to provide in order to apply for a loan?",
+					"Can you outline the paperwork or documentation that is typically required during the loan application process?",
+					"What specific documents do I need to gather and submit when applying for a loan?",
+					"I would like to know the list of documents that I should prepare and present for my loan application."
+			],
+			"responses": ["When applying for a loan, you will need to submit Duly completed Application, Audited Financial Statements for the past two years / Draft accounts up to last available month or valid documents to prove applicant’s monthly income, Bank Statements for the past six months, Duly complete Guarantors Statements, Certificate of Business registration / Incorporation (Details of Directors / Partners + Articles of Association certified by Company Secretary for Corporate applicants), Billing proof of permanent residence, Photocopies of NIC/Passport/Driving License, Supplier invoice, Orginal CR, required RMV documents and other documents which will be specified according to the loan category."]
+		},
+		{
+			"tag": "loan_deny",
+			"patterns": ["What if my loan approval gets deny?",
+					"What happens if my loan application is not approved?",
+					"Could you please explain the course of action if my loan approval is denied?",
+					"What are the next steps or alternatives if my loan application is rejected?",
+					"In the event of loan denial, what options or recourse do I have?",
+					"If my loan application is not approved, what other loan products or options can I explore?"
+			],
+			"responses": ["If your loan application is denied, we understand that it can be disappointing. In such cases, our marketing officers guide you to review the reasons for the denial provided in the notification and provide you further information to fix the potential shortcomings else direct you to other loan options, working on enhancing your credit profile, and discuss with you further to improve your chances for loan approval."]
+		},
+		{
+			"tag": "loan_guarantors",
+			"patterns": ["How many guarantors do I need for a loan?",
+					"Could you please clarify the requirement for the number of guarantors for the loan?",
+					"How many guarantors are needed for the loan?",
+					"Do I need to provide one or multiple guarantors for the loan?",
+					"Is there a specific number of individuals who need to guarantee the loan?",
+					"What is the policy regarding the number of guarantees required for loan approval?"
+			],
+			"responses": ["The number of guarantors required for the loan depends on the specific loan product and its associated terms and conditions. Some loans may require a single guarantor like short-term revolving agreements, while others may require multiple guarantors around 2 or 3. Our loan officer will provide you with the exact details during the application process."]
+		},
+		{
+			"tag": "loan_req_garantor",
+			"patterns": ["What are the minimum requirements for a guarantee?",
+					"What are the minimum criteria or qualifications for someone to serve as a guarantor?",
+					"What are the essential prerequisites or qualifications for someone to provide a guarantee?",
+					"I would like to know the key criteria or conditions individuals need to satisfy to serve as guarantors.",
+					"What are the basic qualifications or prerequisites for someone to offer a guarantee for a loan?",
+					"Could you please outline the basic requirements for individuals who are willing to act as guarantors?"
+			],
+			"responses": ["To act as a guarantor for a loan, individuals typically need to have stable source of income, a good credit history, and being of legal age. Additionally, the guarantor should be willing to take on the responsibility of guaranteeing the loan repayment if the borrower defaults. Our loan officer will provide you with the detailed eligibility criteria during the application process according to your loan category."]
+		},
+		{
+			"tag": "loan_miss",
+			"patterns": ["What happens if I miss a loan payment?",
+					"What are the repercussions if I fail to make a loan payment?",
+					"What happens if I am unable to make a scheduled loan payment?",
+					"I would like to understand the impact of a missed loan payment. Could you provide me with information on that?",
+					"In case I miss a loan payment, what are the potential outcomes?",
+					"Could you please explain the consequences of missing a loan payment?"
+			],
+			"responses": ["When you miss a loan payment, it may result in late payment fees or penalties, which will be added to your outstanding balance. Additionally, it can negatively impact your credit history and credit score, making it more difficult to obtain credit in the future. In severe cases, it may lead to default, which can result in legal action or the involvement of debt collection agencies. It's important to communicate with us if you anticipate difficulty in making a payment so that we can explore possible solutions and discuss any available alternatives."]
+		},
+		{
+			"tag": "loan_crib",
+			"patterns": ["Will my CRIB history be checked before approving the loan?",
+					"Do you conduct a CRIB history check as part of the loan approval process?",
+					"Will my CRIB report be reviewed before my loan application is approved?",
+					"Is it standard procedure to assess my CRIB history before granting the loan?",
+					"Do you consider my credit information from CRIB when reviewing my loan application?",
+					"Can you provide information on whether my CRIB history is a factor in the loan approval decision?",
+					"Could you please confirm if a credit check from CRIB is required for loan approval?"
+			],
+			"responses": ["It is our standard procedure to review the credit information provided by CRIB as part of the loan approval process. This enables us to evaluate your credit history and assess the risk associated with the loan."]
+		},
+		{
+			"tag": "eligibility_current",
+			"patterns": [
+				"What are the eligibility requirements to open a current account?",
+				"What criteria must I meet in order to be eligible for opening a current account?",
+				"Are there any specific requirements I need to fulfill to open a current account?",
+				"What do I need to qualify for opening a current account?",
+				"Are there any eligibility criteria I should be aware of when applying for a current account?",
+				"What are the conditions or prerequisites for opening a current account?"
+			],
+			"responses": [
+				"The eligibility requirements to open a current account typically include being at least 18 years old, providing proof of identity (such as a valid passport or driver's license), proof of address, and sometimes a minimum deposit. Employment or income information may also be required, and some banks may check credit history. It's important to note that specific requirements can vary depending on the bank or financial institution."
+			]
+		},
+		{
+			"tag": "required_doc_current",
+			"patterns": [
+				"What are the required documents to open a current account?",
+				"Which documents do I need to provide in order to open a current account?",
+				"What paperwork is necessary for opening a current account?",
+				"Can you please list the documents I'll need to bring when opening a current account?",
+				"What are the documents that the bank requires for opening a current account?",
+				"Are there any specific documents I should prepare when I want to open a current account?"
+			],
+			"responses": [
+				"The required documents to open a current account typically include proof of identity, such as a valid passport, driver's license, or national identification card. Additionally, proof of address is usually required, which can be demonstrated through utility bills, bank statements, or rental agreements. Some banks may also ask for proof of income or employment, such as pay stubs or employment contracts. It's important to note that specific document requirements may vary depending on the bank and country."
+			]
+		},
+		{
+			"tag": "free_banking_service_current",
+			"patterns": [
+				"Does the current account offer any free banking services, such as bill pay or online transfers?",
+				"Are there any free banking services included with the current account, like bill pay or online transfers?",
+				"What types of free banking services are available with the current account, such as bill payment or online fund transfers?",
+				"Do I have access to complimentary banking services like bill pay and online transfers with the current account?",
+				"Are there any charges for using bill pay or online transfer services with the current account, or are they provided free of cost?",
+				"Can I make bill payments and conduct online transfers without incurring any fees using the current account?"
+			],
+			"responses": [
+				"Yes, current accounts often provide free banking services such as bill pay and online transfers. With a current account, you can conveniently pay your bills electronically, set up recurring payments, and make one-time payments to various billers. Additionally, you can utilize online transfer services to send money to other individuals or businesses, whether within your own bank or to accounts at other banks. These free banking services, including bill pay and online transfers, are commonly offered to current account holders, making it easier to manage your finances efficiently."
+			]
+		},
+		{
+			"tag": "business_current",
+			"patterns": [
+				"What are the requirements to qualify for a business current account, if applicable?",
+				"What criteria must be met to qualify for a business current account, if it is applicable?",
+				"Are there specific requirements that businesses need to fulfill in order to qualify for a current account?",
+				"If I want to open a business current account, what eligibility criteria do I need to meet?",
+				"What are the qualifications needed for a business to be eligible for a current account, if applicable?",
+				"Are there any specific conditions or prerequisites that a business must meet to qualify for a current account?"
+			],
+			"responses": [
+				"The requirements to qualify for a business current account typically include providing business registration documents, proof of identity and address for the business owners, proof of business address, and sometimes a minimum deposit. Requirements may vary depending on the bank or financial institution."
+			]
+		},
+		{
+			"tag": "deposited_or_withdraw_current",
+			"patterns": [
+				"Is there a limit on the amount of money that can be deposited or withdrawn from the current account?",
+				"How does the bank calculate the account balance, and how often is it updated?",
+				"What method does the bank use to determine the account balance, and how frequently is it refreshed?",
+				"Can you explain the process for calculating the account balance, and how frequently does it get updated?",
+				"In what manner is the account balance calculated by the bank, and how often is it adjusted?",
+				"How does the bank determine the account balance, and at what intervals is it revised?"
+			],
+			"responses": [
+				"Yes, there is often a limit on the amount of money that can be deposited or withdrawn from a current account. The specific limits can vary depending on the bank and the type of account. It is best to check with your bank to understand the specific deposit and withdrawal limits associated with your current account."
+			]
+		},
+
+		{
+			"tag": "balance_calculated_current",
+			"patterns": [
+				"How is the account balance calculated, and how frequently is it updated?",
+				"How does the bank calculate the account balance, and how often is it updated?",
+				"What method does the bank use to determine the account balance, and how frequently is it refreshed?",
+				"Can you explain the process for calculating the account balance, and how frequently does it get updated?",
+				"In what manner is the account balance calculated by the bank, and how often is it adjusted?",
+				"How does the bank determine the account balance, and at what intervals is it revised?"
+			],
+			"responses": [
+				"The account balance is calculated by adding up the deposits and credits to the account and subtracting the withdrawals and debits. The frequency of balance updates can vary but is typically updated in real-time or at the end of each business day to reflect the most accurate available balance."
+			]
+		},
+		{
+			"tag": "penalties_for_closiing_current",
+			"patterns": [
+				"Are there any penalties for closing the current account before a certain period of time?",
+				"What are the consequences if I close my current account before a specified period of time?",
+				"Are there any fees or penalties for early closure of a current account?",
+				"Will I face any charges if I decide to close my current account before a certain timeframe?",
+				"What are the potential financial implications of closing my current account prior to a specific duration?",
+				"Do I need to fulfill any obligations or face any penalties if I close my current account earlier than expected?"
+			],
+			"responses": [
+				"Penalties for closing a current account before a certain period of time can vary depending on the bank or financial institution. Some banks may impose fees or charges for early account closure, while others may not have any penalties. It's important to review the terms and conditions of your specific current account to understand if there are any consequences for closing the account prematurely."
+			]
+		},
+		{
+			"tag": "insurance_coverage_current",
+			"patterns": [
+				"Does the current account come with any insurance coverage, such as FDIC insurance?",
+				"Is the current account protected by any insurance coverage, like FDIC insurance?",
+				"What kind of insurance coverage does the current account offer, such as FDIC insurance?",
+				"Is there any insurance protection provided with the current account, similar to FDIC insurance?",
+				"Does the current account come with any safeguards, such as insurance coverage like FDIC insurance?",
+				"Can I rely on any insurance coverage, such as FDIC insurance, for the funds in my current account?"
+			],
+			"responses": [
+				"In Sri Lanka, current accounts are typically not covered by FDIC insurance. FDIC insurance is specific to banks in the United States and provides coverage for deposit accounts up to a certain limit. However, Sri Lanka may have its own deposit insurance scheme or regulations in place to protect depositors, so it's advisable to check with the relevant authorities or the specific bank for information on insurance coverage for current accounts."
+			]
+		},
+		{
+			"tag": "rewards_programs_associated_current",
+			"patterns": [
+				"Are there any rewards programs associated with the current account, such as cash back or points for purchases?",
+				"Does the current account offer any rewards programs that provide cash back or points for purchases?",
+				"Are there any incentive programs available with the current account that allow me to earn cash back or points when I make purchases?",
+				"Can I expect any rewards or benefits for using the current account, such as cash back or points accumulation based on my transactions?",
+				"Are there any loyalty programs associated with the current account that offer rewards like cash back or points for making purchases?",
+				"Does the current account have any perks or rewards system in place, such as earning cash back or points on qualifying purchases?"
+			],
+			"responses": [
+				"Some current accounts may offer rewards programs, such as cash back or points for purchases, but this can vary depending on the bank and the specific account. It is advisable to check with your bank or financial institution to see if they offer any rewards programs or additional benefits with their current accounts."
+			]
+		},
+		{
+			"tag": "multiple_current_account_finances",
+			"patterns": [
+				"Can I link multiple current accounts together to manage my finances more easily?",
+				"Is it possible to connect multiple current accounts together for easier financial management?",
+				"Can I link multiple current accounts to streamline my financial management?",
+				"Are there options to integrate multiple current accounts to simplify my financial organization?",
+				"Is it allowed to link multiple current accounts together for better control over my finances?",
+				"Are there any provisions for combining multiple current accounts to facilitate more efficient financial management?"
+			],
+			"responses": [
+				"Yes, it is generally possible to link multiple current accounts together to facilitate easier financial management. By linking accounts, you can centralize your funds, track transactions across multiple accounts, and potentially transfer funds between them seamlessly. However, the ability to link accounts may depend on the policies and capabilities of your specific bank or financial institution."
+			]
+		},
+		{
+			"tag": "additional_tool_help_current",
+			"patterns": [
+				"Does the bank offer any additional tools or resources to help manage my current account, such as mobile budgeting apps or financial planning services?",
+				"Are there any tools or resources provided by the bank to assist with managing my current account, such as mobile budgeting apps or financial planning services?",
+				"Does the bank offer any extra features or resources to help me effectively manage my current account, such as mobile apps for budgeting or financial planning assistance?",
+				"Are there any supplementary tools or services available from the bank to aid in the management of my current account, such as mobile apps for budget tracking or financial planning guidance?",
+				"What additional tools or resources does the bank provide to support customers in managing their current accounts, such as mobile applications for budgeting or access to financial planning services?",
+				"Are there any value-added services or tools offered by the bank to help customers manage their current accounts, such as mobile budgeting apps or access to financial planning resources?"
+			],
+			"responses": [
+				"Yes, many banks offer additional tools and resources to help manage current accounts, such as mobile budgeting apps, financial planning services, and personal finance management tools. These tools can assist customers in tracking expenses, setting financial goals, and gaining insights into their spending habits."
+			]
+		},
+		{
+			"tag": "maximum_gold",
+			"patterns": ["What is the maximum gold loan amount I can receive based on the value of my gold?","Maximum gold loan amount based on the value of my gold?","How much can I get as a gold loan based on my gold's value?"],
+			"responses": ["The maximum gold loan amount you can receive depends on the value of your gold. We evaluate the purity and weight of your gold to determine the loan amount. 12 Months = 24k:105000 , 22k:95000 , 21k:88000 , 20k:84000 , 19k:80000. 6 Months = 24k:107000 , 22k:94000 , 21k:91000 , 20k:88000 , 19k:83000. 3 Months = 24k:112000 , 22k:102000 , 21k:96000 , 20k:92000 , 19k:87000. "]
+		},
+		{
+			"tag": "interestGold",
+			"patterns": ["What is the interest rate charged on the gold loan? "," Gold loan interest rate", "How much interest will I be charged for a gold loan?"],
+			"responses": [" Interest rate : 12 Months = 25.50%p.a. , 6 Months = 25.00%p.a., 12 Months = 24.50%p.a."]
+		},
+		{
+			"tag": "Goldloan_tenure",
+			"patterns": ["What is the tenure of the gold loan?","How long can I avail the gold loan for?", "Gold loan duration?"],
+			"responses": ["12 Months, 6 Months, and 3 Months "]
+		},
+		{
+			"tag": "Goldloan_min",
+			"patterns": ["What is the minimum and maximum gold loan amount that can be borrowed?","What are the limits for the gold loan amount?","Is there a range for the gold loan amount?"],
+			"responses": ["The minimum and maximum gold loan amount that can be borrowed may vary based on several factors, including the value and purity of your gold, The maximum : 112 000/= and The minimum : 75 000/= "]
+		},
+		{
+			"tag": "Goldloan_documents",
+			"patterns": ["What documents are required to apply for a gold loan?","Which documents do I need to provide for a gold loan?","List of documents needed for a gold loan application?"],
+			"responses": ["To apply for a gold loan, you typically need to provide the following documents:Customer's identification should be proved via NIC, valid Driving license or valid passport. Note : Customer should be a Sri Lankan citizen over 18 years of age who owns gold or gold jewellery with caratage from 12 to 24 "]
+		},
+		{
+			"tag": "Goldloan_long",
+			"patterns": ["How long does it take to process the gold loan application and disburse the gold loan amount?", "What is the processing time for a gold loan?", "When can I expect to receive the disbursed loan amount for a gold loan?" ],
+			"responses": ["You can get a Gold Loan in less than an hour."]
+		},
+		{
+			"tag": "Goldloan_charges",
+			"patterns": ["Are there any prepayment charges if I repay the loan before the end of the tenure?", "Do I have to pay any fees for repaying the gold loan early?","Are there penalties for early loan repayment?"],
+			"responses": [" A prepayment penalty is a monetary burden you have to bear when you pay your loan off earlier than specified in the agreement. If the terms and conditions of your loan agreement contain a prepayment clause, you will be penalised if you clear your debt early."]
+		},
+		{
+			"tag": "Goldloan_repay",
+			"patterns": ["What happens if I am unable to repay the gold loan on time?","What are the consequences of not repaying the gold loan as per the agreed terms?","What if I default on my gold loan payment?"],
+			"responses": ["When a borrower fails to repay a loan in full within the stipulated period, the lender can sell the gold through a public auction at the borrower's risk and expense."]
+		},
+		{
+			"tag": "Goldloan_security",
+			"patterns": ["How will my gold be stored and secured while it is pledged as collateral for the loan?","What measures are taken to ensure the security of my gold while it is being held as collateral?","Can you provide information about the storage and security arrangements for pledged gold?"],
+			"responses": ["Golds will be kept under the supervision of the bank until the settlement of pledge loans. Golds are kept in a warehouse under dual control of you and the Bank "]
+		},
+		{
+			"tag": "Goldloan_history",
+			"patterns": ["Will my credit score or credit history be checked before approving the gold loan?","Is a credit check required for the gold loan approval process?","Does my creditworthiness impact the approval of a gold loan?"],
+			"responses": [" Yes, enders will assess your credit score and history to determine your creditworthiness and financial health."]
+		},
+		{
+			"tag": "Goldloan_fee",
+			"patterns": ["What is the processing fee and other charges associated with the gold loan?","Are there any fees or charges I need to pay for a gold loan?","Can you provide information about the charges and fees applicable to the gold loan?"],
+			"responses": [" The processing fee is 0.50% of loan amount and the interest rate. No any other charges"]
+		},
+		{
+			"tag": "Goldloan12_online",
+			"patterns": ["Can I apply for a gold loan online or do I need to visit a physical branch?","Is it possible to apply for a gold loan online?","Do I have the option to apply for a gold loan digitally?"],
+			"responses": [" No, You can get a gold loan in online. You should visit physical to any branch of ours "]
+		},
+		{
+			"tag": "Goldloan_eligible",
+			"patterns": ["Is there a specific type or purity of gold that is required to be eligible for a gold loan?","What kind of gold is accepted as collateral for a gold loan?","Are there any specific requirements regarding the purity of gold for a gold loan?"],
+			"responses": [" All you need is to bring in your gold articles (generally between 18-24 karats) along with any proof of valuation"]
+		},
+		{
+			"tag": "Goldloan_entire",
+			"patterns": ["Can I choose to pay the interest on the gold loan periodically or do I need to repay the entire loan amount at once?","Is there an option to make periodic interest payments for the gold loan?","Do I have the flexibility to repay only the interest on the gold loan?"],
+			"responses": ["One of the common ways to pay the gold loan is through periodic interest. It means that both the principal amount and interest amount will be kept separate from each other. You will be required to pay only the interest amount in equated monthly instalments, and the total principal amount can be paid on maturity."]
+		},
+		{
+			"tag": "Goldloan_facilities",
+			"patterns": ["Do you offer enhancement facilities?","Is there an option to increase the loan amount during the loan tenure?","Can I avail of an enhancement facility for my gold loan?"],
+			"responses": ["Yes, we may offer enhancement facilities for gold loans, allowing you to increase the loan amount during the loan tenure. Enhancement facilities provide you with the flexibility to borrow additional funds against your existing gold collateral. The specific terms and conditions, including the eligibility criteria and the process for availing the enhancement facility "]
+		},
+		{
+			"tag": "Goldloan_redeems",
+			"patterns": ["Do you offer bank redeems?","Is there an option for bank redemption of the gold loan?","Can I redeem my gold loan through a bank?"],
+			"responses": [" Yes,Ability to redeem gold articles partially and without prior notice "]
+		},
+		{
+			"tag": "Goldloan_requirements",
+			"patterns": ["What are the minimum requirements for a bank redeem?","What do I need to fulfill to be eligible for a bank redemption of the gold loan?","Are there any specific criteria or documents required for a bank redeem?"],
+			"responses": ["You may need to fulfill certain criteria such as completing the required loan tenure, having a satisfactory repayment history, and providing the necessary documentation. "]
+		},
+		{
+			"tag": "FD_requirements",
+			"patterns": ["What are the eligibility requirements to open a FD account?",
+				"What are the criteria one must meet to be eligible for opening a fixed deposit account?", 
+				"Can you please explain the requirements for opening an FD account?",
+				"What do I need to have or do in order to be able to open a fixed deposit account?",
+				"Are there any specific qualifications or conditions I need to meet to open an FD account?",
+				"Could you provide me with information on the eligibility criteria for starting a fixed deposit account?",
+				"What are the prerequisites or qualifications necessary for opening a FD account?",
+				"I would like to know the eligibility requirements for initiating a fixed deposit account. Can you help me with that?",
+				"What are the basic conditions I need to fulfill if I want to open a fixed deposit account?",
+				"Could you outline the prerequisites for opening an FD account?",
+				"Can you list the eligibility criteria that need to be met to open a fixed deposit account?"
+			],
+			"responses": ["The eligibility requirements to open a FD account involve residents of Sri Lanka over 18 years of age, meeting the minimum income requiremen and providing necessary documentation such as identification, address verification document/s (if ID address changes)."]
+		},		
+		{
+			"tag": "accounts_fd",
+			"patterns": ["What types of FD accounts do you offer?",
+							"What are the different kinds of fixed deposit accounts you have?",
+							"Can you tell me about the various types of FD accounts you offer?",
+							"What options do I have when it comes to opening an FD account?",
+							"Are there different categories of fixed deposit accounts available?",
+							"What are the types of FD accounts that I can consider?",
+							"Do you offer any specific variations of fixed deposit accounts?",
+							"What choices do I have for opening an FD account with you?",
+							"Are there different options for fixed deposit accounts?",
+							"Can you give me an overview of the types of FD accounts I can choose from?",
+							"What are the different types of fixed deposit accounts that customers can avail?"
+			],
+			"responses": ["There are several types of fixed deposits such as regular fixed deposits, senior citizen fixed deposits, joined fixed deposits, as well as monthly and maturity deposits"]
+		},	
+		{
+			"tag": "FD_documents",
+			"patterns": ["What are the required documents to open a FD account?",
+							"Which documents are required for opening an FD account?",
+							"What paperwork should I have when starting a fixed deposit account?",
+							"What are the essential documents needed to open an FD account?",
+							"Which specific papers do I need to provide in order to open a fixed deposit account?",
+							"Can you tell me the basic documents necessary for initiating an FD account?",
+							"What kind of documentation is needed for opening a fixed deposit account?",
+							"What documents do I have to submit to open an FD account?",
+							"Which documents are mandatory when I want to open a fixed deposit account?",
+							"What are the key documents I must have to open an FD account?"
+	
+			],
+			"responses": ["Proof of identity, proof of address, and a completed FD Mandate, KFC, and FATCA are required to open your new FD account."]
+		},     
+		{
+			"tag": "FD_minimum_deposit",
+			"patterns": ["What is the minimum deposit required to open a fixed deposit account?",
+							"What is the minimum amount of money I need to start a fixed deposit account?",
+							"How much is the minimum deposit required to open an FD account?",
+							"What is the smallest sum of money I must deposit to initiate a fixed deposit account?",
+							"Can you tell me the minimum amount of money I need to have in order to open a fixed deposit account?",
+							"What is the minimum deposit amount needed to start a fixed deposit account?",
+							"How much do I need to deposit at a minimum to open an FD account?",
+							"What is the minimum required deposit to open a fixed deposit account?",
+							"Could you please let me know the minimum amount I should have to open a fixed deposit account?",
+							"What is the minimum initial deposit required for an FD account?",
+							"How little can I deposit to open a fixed deposit account?"
+			],
+			"responses": ["The minimum deposit amount is Rs. 5,000/-"]
+		},       
+		{
+			"tag": "FD_interest_rate",
+			"patterns": ["What is the interest rate offered on the fixed deposit account?",
+							"What is the interest rate on the fixed deposit account?",
+							"How much interest will I earn on a fixed deposit account?",
+							"What is the rate at which my money will grow in a fixed deposit account?",
+							"Can you tell me the interest percentage offered for a fixed deposit account?",
+							"What is the current interest rate for a fixed deposit account?",
+							"How much interest will be added to my fixed deposit account?",
+							"What is the annual interest rate on a fixed deposit account?",
+							"Could you please let me know the rate at which my funds will earn interest in a fixed deposit account?",
+							"What is the interest rate I can expect on my fixed deposit account?",
+							"How much will my money grow in a fixed deposit account with the given interest rate?"
+			],
+			"responses": ["You can see the current rate for our Fixed Deposits in the site or you can contact our FD marketing officers."]
+		},       
+		{
+			"tag": "FD_duration",
+			"patterns": ["What is the duration of the fixed deposit account?",
+							"How long is the duration of a fixed deposit account?",
+							"What is the time period for which a fixed deposit account is held?",
+							"What is the length of time for a fixed deposit account?",
+							"Can you tell me the duration of a fixed deposit account?",
+							"How many years or months does a fixed deposit account last?",
+							"What is the timeframe or duration of a fixed deposit account?",
+							"What is the specific period for which a fixed deposit account is opened?",
+							"Could you please inform me about the duration of a fixed deposit account?",
+							"What is the duration of time during which funds are held in a fixed deposit account?",
+							"How long does a fixed deposit account stay active or valid?"
+			],
+			"responses": ["The duration of a fixed deposit account can be chosen by you. You can either go with monthly (3, 6, 9 months) deposits or anual deposits which runs more than one year."]
+		},       
+		{
+			"tag": "FD_penalties",
+			"patterns": ["Are there any penalties for early withdrawal of funds from the fixed deposit account?",
+							"Will I be charged any fees for taking out money from the fixed deposit account before it matures?",
+							"Do I have to pay any penalties if I withdraw funds early from the fixed deposit account?",
+							"Are there any extra costs if I need to take out my money before the agreed-upon time for the fixed deposit account?",
+							"If I withdraw my funds before the maturity date, will there be any penalties or charges?",
+							"Is there a fee for early withdrawal of funds from the fixed deposit account?",
+							"What happens if I need to access my money before the fixed deposit account reaches its full term? Are there any penalties?",
+							"Can you tell me if there are any additional costs associated with withdrawing money from the fixed deposit account before it's due?",
+							"If I decide to withdraw my funds before the end of the fixed deposit account's duration, will there be any penalties?",
+							"Do I need to pay any fees for early withdrawal of funds from the fixed deposit account?",
+							"Will I face any charges or penalties if I take out my money before the fixed deposit account matures?"
+			],
+			"responses": ["There are penalties for withdrawing funds before the maturity date. The panelty will be evaluated according to your deposit rate and maturity date. For further details please contact FD department +94 0112 ### ###"]
+		},       	
+		{
+			"tag": "interest_rate_FD",
+			"patterns": ["Will the interest rate on the fixed deposit account be fixed or variable during the duration of the account?",
+							"Will the interest rate on the fixed deposit account stay the same throughout the account's duration?",
+							"Is the interest rate on the fixed deposit account fixed or can it change over time?",
+							"Does the interest rate for the fixed deposit account remain constant or is it subject to variation?",
+							"Will the interest rate on the fixed deposit account remain steady or can it fluctuate?",
+							"Does the interest rate on the fixed deposit account stay unchanged or can it be adjusted?",
+							"Can you clarify if the interest rate on the fixed deposit account is fixed or variable?",
+							"Is the interest rate on the fixed deposit account stable or can it potentially change?",
+							"Will the interest rate for the fixed deposit account remain the same or is there a possibility of it being modified?",
+							"Does the interest rate on the fixed deposit account stay fixed or is there a chance of it being altered?",
+							"Is the interest rate on the fixed deposit account consistent or can it vary?"
+			],
+			"responses": ["The interest rate on a fixed deposit account either fixed or variable accounding to the market. It depends on the terms and conditions set by the bank. Visit the current deposit rates in the site"]
+		},       	
+		{
+			"tag": "automatically_at_maturity_FD",
+			"patterns": ["Can the fixed deposit account be renewed automatically at maturity? ",
+							"Will the fixed deposit account renew itself automatically when it matures?",
+							"Is there an option for the fixed deposit account to renew automatically at the end of its term?",
+							"Does the fixed deposit account have automatic renewal upon reaching maturity?",
+							"Can the fixed deposit account be renewed automatically once it completes its duration?",
+							"Will the fixed deposit account renew itself automatically or do I need to take any action after it matures?",
+							"Do I have to manually renew the fixed deposit account or does it happen automatically when it reaches maturity?",
+							"Is there a process for automatic renewal of the fixed deposit account after it matures?",
+							"Upon maturity, does the fixed deposit account renew automatically without any additional steps from me?",
+							"What happens to the fixed deposit account when it matures? Does it renew automatically or do I need to request the renewal?",
+							"Do I need to initiate the renewal of the fixed deposit account after it matures, or is it done automatically?"
+					],
+			"responses": ["Some of our fixed deposit accounts offer automatic renewal at maturity, allowing you to continue the deposit without manual intervention. This could be done when you are opening your FD account (mentioned in FD mandate)."]
+		},       	
+		{
+			"tag": "monthly_quarterly_FD",
+			"patterns": ["Can I choose to receive the interest earned on the fixed deposit account periodically, such as monthly or quarterly?",
+							"Can I choose to receive the interest earned on the fixed deposit account regularly, like every month or quarter?",
+							"Is it possible to get the interest from the fixed deposit account on a monthly or quarterly basis?",
+							"Can I opt for receiving the interest earned on the fixed deposit account periodically, such as monthly or quarterly payments?",
+							"Is there an option to receive the interest accrued on the fixed deposit account regularly, like monthly or quarterly?",
+							"Can I receive the interest from the fixed deposit account at set intervals, such as monthly or quarterly?",
+							"Is it allowed to receive the interest earned on the fixed deposit account in regular intervals, like every month or quarter?",
+							"Can I arrange to receive the interest from the fixed deposit account periodically, such as in monthly or quarterly installments?",
+							"Is there a possibility of receiving the interest earned on the fixed deposit account on a monthly or quarterly basis?",
+							"Can I request to receive the interest from the fixed deposit account periodically, like monthly or quarterly disbursements?",
+							"Is it feasible to have the interest earned on the fixed deposit account paid out regularly, such as on a monthly or quarterly schedule?"
+			],
+			"responses": ["Depending on the how you have choosen your interest paid method, you may have the option to receive interest earned on the fixed deposit account periodically, such as monthly or quarterly. Also, you have the ability to request to collect money at bank, trasfer to your savings account or trasfer if there is any loan payment"]
+		}, 
+		{
+			"tag": "renewed_account_FD",
+			"patterns": ["What will be the interest rate for the renewed account?",
+							"What interest rate will I receive for the renewed account?",
+							"Will the interest rate be different for the renewed fixed deposit account?",
+							"Can you tell me the new interest rate for the renewed account?",
+							"What will be the interest rate offered on the renewed fixed deposit account?",
+							"Is there a change in the interest rate for the renewed account?",
+							"What interest rate can I expect for the renewed fixed deposit account?",
+							"Will the renewed account have a different interest rate?",
+							"Can you provide information about the interest rate for the renewed fixed deposit account?",
+							"How much interest will I earn on the renewed account?",
+							"What is the rate at which my money will grow in the renewed fixed deposit account?"
+			],
+			"responses": ["The interest rate for a renewed fixed deposit account mostly will be your deposit rate. However, if your reneawal date is on the date which new rate are commenced, there are high possibilities to increase or decrease your interest rate."]
+		},
+		{
+			"tag": "grace_period_FD",
+			"patterns": ["Is there a grace period for renewing or withdrawing the funds from the fixed deposit account after maturity?",
+							"Do I have extra time after the fixed deposit account matures to decide whether to renew or withdraw the funds?",
+							"Is there a grace period after the maturity of the fixed deposit account for me to renew or withdraw the funds?",
+							"Will I be given additional time to decide what to do with the funds after the fixed deposit account reaches maturity?",
+							"Is there a specific period after the fixed deposit account matures when I can choose to renew or withdraw the funds without any penalties?",
+							"Can you tell me if there is a time allowance after the fixed deposit account matures for me to make a decision on renewing or withdrawing the funds?",
+							"Is there a certain duration after the maturity of the fixed deposit account where I can choose whether to renew or withdraw the funds without facing any charges?",
+							"Will I be granted a grace period after the fixed deposit account matures to decide on renewing or withdrawing the funds without any consequences?",
+							"Do I have a window of time after the fixed deposit account reaches maturity to decide what to do with the funds, and will there be any penalties during this period?",
+							"Can you confirm if there is a period of time after the fixed deposit account matures where I can decide whether to renew or withdraw the funds without any fees or penalties?",
+							"Is there an additional timeframe after the maturity of the fixed deposit account for me to make a decision about the funds without any charges or penalties?"
+			],
+			"responses": ["There is no limitation. You can keep the deposit after maturity. It will be renewing automatically. If you need to withdraw after maturity, you will gain the interest according to the time period."]
+		},	
+		{
+			"tag": "maturity_date_FD",
+			"patterns": ["What happens if I need to withdraw the funds before the maturity date?",
+							"What if I need to withdraw the money from the fixed deposit account before it matures?",
+							"What if I have to take out the funds before the agreed maturity date of the fixed deposit account?",
+							"What happens if I need to withdraw the money early from the fixed deposit account?",
+							"Can you explain the procedure and consequences of withdrawing the funds before the maturity date of the fixed deposit account?",
+							"If I need to access the money before the fixed deposit account's maturity, what will occur?",
+							"What if I have an urgent situation and need to withdraw the funds before the agreed-upon maturity date?",
+							"If I cannot wait until the fixed deposit account matures and have to withdraw the funds early, what will be the outcome?",
+							"What are the implications if I have to withdraw the money from the fixed deposit account before it reaches its maturity date?",
+							"If I need to withdraw the funds before the fixed deposit account's maturity, what will be the impact?",
+							"What are the consequences if I have to take out the funds before the agreed-upon maturity date of the fixed deposit account?"
+			],
+			"responses": ["Your interest will be calulated only for the number of days. The maturity interest you cannot receive."]
+		},	
+		{
+			"tag": "FD_renewal_notices",
+			"patterns": ["How can I have renewal notices?",
+							"How can I get renewal notifications for my fixed deposit account?",
+							"What can I do to receive renewal reminders for the fixed deposit account?",
+							"Is there a way to stay informed about the renewal of my fixed deposit account?",
+							"How will I know when it's time to renew my fixed deposit account?",
+							"Can I sign up for renewal alerts for my fixed deposit account?",
+							"What steps do I need to take to receive renewal notices for the fixed deposit account?",
+							"Is there a notification system in place for the renewal of my fixed deposit account?",
+							"Can you explain how I can be notified about the upcoming renewal of my fixed deposit account?",
+							"What options are available for me to stay updated on the renewal process for my fixed deposit account?",
+							"How can I make sure I don't miss the renewal date for my fixed deposit account?"
+			],
+			"responses": ["We send renewal notices before the maturity date to inform you about the options for renewing the FD account. But, this facility will be processed only those who requested for the notices. Otherwise you will just receive a text message through mobile phone"]
+		},
+		{
+			"tag": "FD_certification",
+			"patterns": ["Is there any certification you provide for opening a FD account?",
+							"Do I need any certification to open a fixed deposit account?",
+							"Is there a certificate required for opening a fixed deposit account?",
+							"Are there any official documents or certifications needed to open a fixed deposit account?",
+							"Do I have to obtain any specific certification to start a fixed deposit account?",
+							"Is there any certification process involved in opening a fixed deposit account?",
+							"Are there any certifications or credentials I should have to open a fixed deposit account?",
+							"Do I need a specific certificate to open a fixed deposit account?",
+							"Will I be asked to provide any certification when opening a fixed deposit account?",
+							"Is there any certification given to customers when they open a fixed deposit account?",
+							"Are there any specific documents or certifications I should be aware of before opening a fixed deposit account?"
+			],
+			"responses": ["We provide a FD certificate. If you open your FD at our head office, you will be receiving it at the end of the fd activation process or if you open your account at branch, you will be receiving it within 2 days. We will inform you to collect the certificate. \n The cerficate includes all the main FD details clearly including maturity date"]
+		},
+		{
+			"tag": "FD_nominee_confirmation",
+			"patterns": ["Do you provide a nominee confirmation letter?",             
+							"Do you issue a nominee confirmation letter?",
+							"Is there a nominee confirmation letter provided by your bank?",
+							"Can I receive a confirmation letter for the nominee I have appointed?",
+							"Do you offer a letter confirming the nomination I made for the account?",
+							"Is there a letter available that confirms the nominee I have chosen for the account?",
+							"Could you let me know if you provide a nominee confirmation letter?",
+							"Is there a specific letter I can obtain to confirm the nominee on my account?",
+							"Can I request a confirmation letter for the nominee I've designated?",
+							"Do you have a nominee confirmation letter as part of your services?",
+							"Is it possible to receive a letter confirming the nominee I have assigned to the account?"
+			],
+			"responses": ["our bank often provide a nominee confirmation letter to acknowledge the nomination of a beneficiary for the FD account. You have to request for nominee confirmation letters as well."]
+		},
+		{
+			"tag": "FD_close",
+			"patterns": ["How do I close the FD account if needed?",
+							"What is the process for closing a fixed deposit account if I need to?",
+							"How can I close my FD account if necessary?",
+							"What steps do I need to take to close the fixed deposit account if required?",
+							"If I need to close my FD account, what is the procedure?",
+							"Can you explain how I can go about closing my fixed deposit account if I need to?",
+							"What are the requirements or steps involved in closing the FD account if necessary?",
+							"If I want to close my fixed deposit account, what do I need to do?",
+							"Is there a specific process I should follow to close the FD account if I decide to?",
+							"Could you please guide me on how to initiate the closure of my fixed deposit account if needed?",
+							"What is the proper way to close the fixed deposit account if I no longer require it?"
+			],
+			"responses": ["To close an FD account, you typically need to visit the bank's branch. You should bring your ID/DL and FD certificate with you."]
+		},
+		{
+			"tag": "FD_special_rate",
+			"patterns": ["Do you offer any special rate?",
+							"Do you provide any special interest rates?",
+							"Are there any special rates offered for certain types of accounts?",
+							"Do you have any promotional rates available?",
+							"Are there any special interest rates currently available?",
+							"Can I get a special rate on my account?",
+							"Do you offer any preferential rates for specific customers?",
+							"Are there any discounted rates or special offers for opening an account?",
+							"Do you provide any special rates for long-term deposits?",
+							"Are there any exclusive interest rates for new customers?",
+							"Can I avail myself of any special rate on my deposit?"
+					],
+			"responses": ["Our bank offers special rates on FD accounts during certain promotional periods or for specific customer segments who are long-time customers. Inquire with our bank or FD marketing officers about any special rates currently available."]
+		},
+		{
+			"tag": "FD_additional_deposits",
+			"patterns": ["Can I make additional deposits into the fixed deposit account during the term of the account?",
+							"Can I add more money to the fixed deposit account during the account term?",
+							"Am I allowed to make additional deposits into the fixed deposit account while it's active?",
+							"Is it possible to contribute extra funds to the fixed deposit account during its term?",
+							"Can I deposit more money into the fixed deposit account after opening it?",
+							"Do you permit customers to make additional deposits to the fixed deposit account while it's ongoing?",
+							"Is there an option to increase the amount in the fixed deposit account by making extra deposits?",
+							"Can I add more funds to the fixed deposit account throughout its term?",
+							"Am I eligible to make supplementary deposits to the fixed deposit account while it's still active?",
+							"Could you explain if I have the option to deposit additional money into the fixed deposit account during the specified period?",   
+							"Can I make further deposits into the fixed deposit account while it's in progress?"
+					],
+			"responses": ["Our bank allow additional deposits into the fixed deposit account during its term. You are allowed to do Deposit enhancement."]
+		},
+		{
+			"tag": "FD_renew",
+			"patterns": ["What happens if I forget to renew the fixed deposit account?",
+							"What are the consequences if I forget to renew my fixed deposit account?",
+							"If I fail to renew my fixed deposit account, what will happen?",
+							"What happens if I forget or neglect to renew the fixed deposit account on time?",
+							"If I accidentally overlook the renewal of my fixed deposit account, what will be the outcome?",
+							"Could you explain the implications of forgetting to renew the fixed deposit account?",
+							"What are the repercussions if I don't remember to renew the fixed deposit account?",
+							"If I miss the renewal deadline for my fixed deposit account, what will be the impact?",
+							"What happens if I neglect to renew my fixed deposit account before it matures?",
+							"Can you clarify the consequences if I fail to renew the fixed deposit account as required?",
+							"If I unintentionally forget to renew the fixed deposit account, what will be the result?"
+					],
+			"responses": ["If you forget to renew the fixed deposit account, it will automatically renew."]
+		},
+		{
+			"tag": "transfer_FD",
+			"patterns": ["Can I transfer the funds from the fixed deposit account to another account or investment?",
+							"Can I move the money from the fixed deposit account to another account or investment?",
+							"Am I allowed to transfer the funds from the fixed deposit account to a different account or investment?",
+							"Is it possible for me to transfer the money from the fixed deposit account to another account or investment?",
+							"Can I shift the funds from the fixed deposit account to another account or investment?",
+							"Do you permit transferring the funds from the fixed deposit account to another account or investment?",
+							"Can I transfer the money from the fixed deposit account to a different account or investment option?",
+							"Is there an option to move the funds from the fixed deposit account to another account or investment?",
+							"Do you allow transferring the funds from the fixed deposit account to a different account or investment?",
+							"Can I redirect the funds from the fixed deposit account to another account or investment?",
+							"Am I allowed to move the funds from the fixed deposit account to another account or investment option?"
+					],
+			"responses": ["You can transfer your fixed deposit account to another account on the maturity date."]
+		}
+
+]
+}
