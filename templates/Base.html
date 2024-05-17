@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Chatbot</title>
+
+
+</head>
+<body>
+<div class="container">
+    <ul>
+        <li><br><img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" ></li><br>
+        <div class="topnav-right">
+            <br>
+            <li><button class="topb"><b>About Us</b></button></li>
+            <li><button class="topb"><b>Contact Us</b></button></li>
+            <li><button class="topb"><b>Services</b></button></li>
+            <li><button class="topb"><b>Log out</b></button></li>
+        </div>
+    </ul>
+
+
+    <marquee class="marquee"><b>Leads Bank (Sri Lanka) PLC!<b></marquee>
+
+    <div class="row" style="text-align: center;">
+        <div class="column">
+            <div class="card">
+                <div class="container2"><br><br>
+                    <h2>WELCOME</h2><br><br>
+                    <p class="title">Leads Bank (Sri Lanka) PLC</p><br><br>
+                    <p>We value Synergy, Stability, Service, & Sharing :)<br><br>We Provide Our Services With Best Practices<br><br>Our Service At You...<br></p><br>
+                    <p>Take Your Assistant With Our Bot Service Today :) </p><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">At Your Service :)</h4>
+                    <p class="chatbox__description--header">Hi. I am Sam. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+                <button class="chatbox__send--footer clear__button" onclick="RefreshPage()">Stop</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        function RefreshPage()
+        {
+            location.reload();
+        }
+    </script>
+
+    <!-- <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script> -->
+    <script>
+    var SCRIPT_ROOT = "{{ request.script_root }}";
+</script>
+
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <div class="footer">
+        <p>Copyright © 2023 All Rights Reserved.<br><br>Leads Bank (Sri Lanka) PLC, Member of Leads Group.<br><br>Designed by eDesigners@LMU:SE19</p>
+    </div> 
+
+</body>
+</html>
