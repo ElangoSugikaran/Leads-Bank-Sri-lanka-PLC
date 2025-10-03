@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Portfolio - Projects</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        /* ============================================
+           ROOT VARIABLES & GLOBAL STYLES
+           ============================================ */
+        :root {
+            --primary-color: #20c997;
+            --secondary-color: #6c757d;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============================================
+           PAGE HEADER SECTION
+           ============================================ */
+        .page-header {
+            padding: 100px 0 60px;
+            background: linear-gradient(-45deg, #0d1f1a, #0f2720, #134d3a, #0d1f1a);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(32, 201, 151, 0.1), transparent);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .header-title-large {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            color: transparent;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .header-title-overlay {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            margin-top: -20px;
+            letter-spacing: 3px;
+        }
+
+        .header-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #20c997, #17a589);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        /* ============================================
+           FILTER BUTTONS
+           ============================================ */
+        .filter-section {
+            padding: 50px 0 30px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            background: #ffffff;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #20c997, #17a589);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(32, 201, 151, 0.3);
+        }
+
+        /* ============================================
+           PROJECT CARDS
+           ============================================ */
+        .projects-section {
+            padding: 30px 0 80px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 0 15px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+            background: #f0f0f0;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-card:hover .card-image {
+            transform: scale(1.12);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #20c997, #17a589);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(32, 201, 151, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        .project-card:hover .card-title {
+            color: var(--primary-color);
+        }
+
+        .card-description {
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .view-details-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #20c997, #17a589);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(32, 201, 151, 0.25);
+            width: 100%;
+            justify-content: center;
+        }
+
+        .view-details-btn:hover {
+            background: linear-gradient(135deg, #17a589, #20c997);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(32, 201, 151, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .view-details-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .view-details-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ============================================
+           BACK BUTTON
+           ============================================ */
+        .back-button-section {
+            text-align: center;
+            padding: 40px 0 60px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 40px;
+            background: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--dark-color);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--dark-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(52, 58, 64, 0.3);
+            text-decoration: none;
+        }
+
+        .back-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+.footer-section {
+    background: linear-gradient(135deg, #0d1f1a 0%, #134d3a 100%);
+    padding: 60px 0 40px;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #20c997, #17a589, #20c997);
+    background-size: 200% 100%;
+    animation: borderRotate 3s linear infinite;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.social-links-wrapper {
+    margin-bottom: 35px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(32, 201, 151, 0.1);
+    border: 2px solid #20c997;
+    border-radius: 50%;
+    color: #20c997;
+    font-size: 1.3rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #20c997;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
+}
+
+.social-btn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(32, 201, 151, 0.4);
+    border-color: #20c997;
+}
+
+.social-btn i {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover i {
+    color: #0d1f1a;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.footer-copyright {
+    padding-top: 30px;
+    border-top: 1px solid rgba(32, 201, 151, 0.2);
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.copyright-year,
+.developer-name {
+    color: #20c997;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.developer-name:hover {
+    color: #17a589;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 50px 0 30px;
+        margin-top: 60px;
+    }
+
+    .footer-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .footer-copyright p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-section {
+        padding: 40px 0 25px;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .social-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .footer-copyright {
+        padding-top: 25px;
+    }
+}
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 80px 0 50px;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+
+            .card-image-wrapper {
+                height: 220px;
+            }
+
+            .card-content {
+                padding: 25px;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .filter-section {
+                padding: 40px 0 20px;
+            }
+
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-header {
+                padding: 60px 0 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 10px;
+            }
+
+            .card-image-wrapper {
+                height: 200px;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card-title {
+                font-size: 1.15rem;
+            }
+
+            .card-description {
+                font-size: 0.9rem;
+            }
+
+            .filter-buttons {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .view-details-btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+
+            .social-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Hidden class for filtering */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="header-content">
+            <h1 class="header-title-large">Projects</h1>
+            <h2 class="header-title-overlay">All My Projects</h2>
+            <div class="header-divider"></div>
+        </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-section">
+        <div class="container">
+            <ul class="filter-buttons" id="project-filters">
+                <li class="filter-btn active" data-filter="*">All Projects</li>
+                <li class="filter-btn" data-filter="Web-Development">Web Development</li>
+                <li class="filter-btn" data-filter="laravel">Laravel</li>
+                <li class="filter-btn" data-filter="mern">MERN Stack</li>
+                <li class="filter-btn" data-filter="C-sharp-Form">C#</li>
+                <li class="filter-btn" data-filter="Python">Python</li>
+                <li class="filter-btn" data-filter="asp-dot-net">ASP.NET</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-section">
+        <div class="container">
+            <div class="projects-grid" id="project-cards">
+
+                <!-- Project 0: Mebius E-commerce --> 
+                <div class="project-card mern"> 
+                    <div class="card-image-wrapper"> 
+                        <img src="../img/Mebius-project-thumbnail.png" class="card-image" alt="Mebius E-commerce Platform"> 
+                        <div class="card-badge">MERN</div> 
+                    </div> 
+                    <div class="card-content"> 
+                        <h3 class="card-title">Mebius - Full-Stack E-Commerce Platform</h3> 
+                        <p class="card-description">A full-stack clothing e-commerce platform built with the MERN stack, featuring secure authentication, seamless payments, and scalable cloud integration for a smooth shopping experience.</p>
+                        <div class="card-footer"> 
+                            <a href="../MyProject/Mebius_E-Commerce_Project.html" class="view-details-btn"> 
+                                View Details <i class="fas fa-arrow-right"></i> 
+                            </a> 
+                        </div> 
+                    </div> 
+                </div>
+                
+                <!-- Project 1: E-commerce -->
+                <div class="project-card Web-Development">
+                    <div class="card-image-wrapper">
+                        <img src="../img/fp-project cover page image.png" class="card-image" alt="E-commerce Project">
+                        <div class="card-badge">Final Project</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">E-commerce For Crystal Vision Optical Store</h3>
+                        <p class="card-description">A comprehensive e-commerce platform designed to enhance Crystal Vision Optical's digital presence, offering personalized recommendations, secure transactions, and convenient product delivery to improve customer satisfaction.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Final-Project.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: ElectroNest-Shop -->
+                <div class="project-card mern">
+                    <div class="card-image-wrapper">
+                        <img src="../img/ElectroNest-Shop-Bg-Img.png" class="card-image" alt="ElectroNest-Shop">
+                        <div class="card-badge">React</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ElectroNest-Shop Landing Page</h3>
+                        <p class="card-description">A sleek e-commerce landing page built with <strong>Vite + React</strong> and styled using <strong>Tailwind CSS</strong>. Features smooth scrolling, animations, and a product carousel for a dynamic user experience.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/ElectroNest-Shop.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Note App -->
+                <div class="project-card mern">
+                    <div class="card-image-wrapper">
+                        <img src="../img/note-app-cover-img.png" class="card-image" alt="Note App">
+                        <div class="card-badge">MERN</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Note-App Using MERN Stack</h3>
+                        <p class="card-description">Built with the <strong>MERN stack</strong>, enabling secure user authentication for managing notes with <strong>CRUD operations</strong>. Features <strong>toast notifications</strong> and an intuitive design for seamless functionality.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Note_App.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Sugikaran Store -->
+                <div class="project-card laravel">
+                    <div class="card-image-wrapper">
+                        <img src="../img/cover backgrond.png" class="card-image" alt="Sugikaran Store">
+                        <div class="card-badge">Laravel</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sugikaran Store E-Commerce Platform</h3>
+                        <p class="card-description">A <strong>Laravel 11</strong> e-commerce platform with secure user registration, email verification, and password reset. Features product browsing, cart management, and secure payments via <strong>Stripe</strong> or <strong>Cash on Delivery</strong>.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Laravel_Sugikaran_Store.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Bank Chatbot -->
+                <div class="project-card Python">
+                    <div class="card-image-wrapper">
+                        <img src="../img/bank-chatbot-pic.PNG" class="card-image" alt="Bank Chatbot">
+                        <div class="card-badge">AI</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Leads Bank AI Chatbot</h3>
+                        <p class="card-description">An AI-powered chatbot for Leads Bank to address customer inquiries efficiently, reducing wait times and improving communication. Enhances customer satisfaction and operational efficiency.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Leads_Bank_ChatBot.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Raythos Aerospace -->
+                <div class="project-card asp-dot-net">
+                    <div class="card-image-wrapper">
+                        <img src="../img/Raythos-Aerospace.png" class="card-image" alt="Raythos Aerospace">
+                        <div class="card-badge">ASP.NET</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Raythos Aerospace MVC System</h3>
+                        <p class="card-description">An ASP.NET MVC-based online system to revolutionize aircraft production and sales, featuring customization options, real-time tracking, and data-driven decision-making capabilities.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Raythos_Aerospace.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Railway Management -->
+                <div class="project-card Web-Development">
+                    <div class="card-image-wrapper">
+                        <img src="../img/wonder-railway-management-background.png" class="card-image" alt="Railway Management">
+                        <div class="card-badge">Web App</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Wonder Railway Management System</h3>
+                        <p class="card-description">An integrated digital solution to optimize railway operations. Streamlines ticket booking, train tracking, passenger management, and employee oversight for enhanced efficiency.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Wonder_Railway_Management_System.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Health Care Plus -->
+                <div class="project-card C-sharp-Form">
+                    <div class="card-image-wrapper">
+                        <img src="../img/HealthCarePlus-pic.PNG" class="card-image" alt="Health Care Plus">
+                        <div class="card-badge">C#</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Health Care Plus HMS</h3>
+                        <p class="card-description">A cutting-edge healthcare management system developed with C# to streamline hospital operations. Features secure role-based access, efficient appointment scheduling, and comprehensive EMR management.</p>
+                        <div class="card-footer">
+                            <a href="../MyProject/Health_Care_Plus.html" class="view-details-btn">
+                                View Details <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-section">
+        <a href="../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+
+<!-- Footer Start -->
+<footer class="footer-section">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Social Links -->
+                <div class="social-links-wrapper">
+                    <h4 class="footer-title">Connect With Me</h4>
+                    <div class="social-links">
+                        <a class="social-btn" href="https://github.com/ElangoSugikaran" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a class="social-btn" href="https://www.linkedin.com/in/elango-sugikaran-75323a256/" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a class="social-btn" href="https://www.instagram.com/sugikaran_elango/" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    <p>&copy; <span class="copyright-year">2025</span> Developed by <span class="developer-name">Elango Sugikaran</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Filter Functionality -->
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filterValue === '*') {
+                        card.classList.remove('hidden');
+                    } else {
+                        if (card.classList.contains(filterValue)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
